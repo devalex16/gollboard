@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Jost:wght@700&display=swap');
+
+.animatedButton {
+  background: linear-gradient(to right,
+    #e4e4e7 10%,
+    #52525b 80%);
+  background-size: 300% auto;
+  animation: shine 10s ease-in-out infinite alternate;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% ;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.textRoboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.textMark {
+  font-family: 'Jost', sans-serif;
+  background: none;
+  text-decoration: none;
+} 
+
+.imageResponsive{
+  width: 70%;
+  height: 200px;
+  position: relative;
+  border-radius: 30px 0px 30px 0px;
+}
+
+.image {
+  object-fit: cover;
+  width: 100% !important;
+  height: unset !important;
+  border-radius: 30px 0px 30px 0px;
+}
+
+@media (min-width: 768px) {
+  .imageResponsive{
+    width: 70%;
+    height: 300px;
+    position: relative;
+    border-radius: 30px 0px 30px 0px;
+  }
+}

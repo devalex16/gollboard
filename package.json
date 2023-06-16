@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.0.10",
     "@radix-ui/react-toolbar": "^1.0.4",
-    "fs": "^0.0.1-security",
+    "@reactflow/node-resizer": "^2.1.0",
     "next": "12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

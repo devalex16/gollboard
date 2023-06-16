@@ -1,6 +1,11 @@
 import { useState, useCallback } from 'react';
+
 import * as Toolbar from '@radix-ui/react-toolbar';
+
+import { Images } from '@phosphor-icons/react';
+
 import { NodeProps } from 'reactflow';
+
 import crypto from 'crypto';
 
 interface ToolProps {
@@ -33,7 +38,7 @@ export default function ToolBar({ nodes, setNodes }: ToolProps) {
 
   const [bold, setBold] = useState("font-normal")
 
-  function addNodes(type) {
+  function addNodes(type: string) {
     setNodes((nodes: Array<NodeProps>) => [
       ...nodes,
       {
@@ -86,11 +91,11 @@ export default function ToolBar({ nodes, setNodes }: ToolProps) {
   return (
     <Toolbar.Root className="fixed top-10 left-1/2 -translate-x-1/2 rounded-xl shadow-lg border border-zinc-300 px-8 py-2 max-w-[900px] h-[50px] overflow-hidden bg-white flex flex-row align-center justify-around">
       <Toolbar.Button
-        className="h-[95%] w-[50px] mx-1 relative transition-transform hover:-translate-y-1"
+        className="h-[100%] w-[50px] mx-1 relative transition-transform hover:-translate-y-1"
         onClick={(e) => {
           addNodes("image")
         }}>
-        <ImageIcon />
+        <Images size={"100%"} />
       </Toolbar.Button>
       <Toolbar.Button
         className="h-[95%] w-[50px] mx-1 bg-cyan-400 shadow border rounded transition-transform hover:-translate-y-1"
@@ -109,10 +114,3 @@ export default function ToolBar({ nodes, setNodes }: ToolProps) {
     </Toolbar.Root>
   )
 }
-
-function ImageIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="#000000" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V158.75l-26.07-26.06a16,16,0,0,0-22.63,0l-20,20-44-44a16,16,0,0,0-22.62,0L40,149.37V56ZM40,172l52-52,80,80H40Zm176,28H194.63l-36-36,20-20L216,181.38V200ZM144,100a12,12,0,1,1,12,12A12,12,0,0,1,144,100Z"></path></svg>
-  )
-}
-

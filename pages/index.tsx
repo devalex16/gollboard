@@ -5,7 +5,7 @@ import HomePage from './home';
 import FlowPage from './flow';
 
 const Home: NextPage = () => {
-  return (
+  return (    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage/>} />
