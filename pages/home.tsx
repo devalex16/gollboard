@@ -19,7 +19,7 @@ export default function HomePage() {
               Crie seus Mapas Mentais da forma que desejar! &#128064;
             </h1>
           </section>
-          <Link className={`bg-zinc-200 text-zinc-900 rounded-lg p-5 block max-w-[300px] md:text-xl ${style.animatedButton}`} to="/project">
+          <Link className={`bg-zinc-200 text-zinc-900 rounded-lg p-5 block max-w-[300px] md:text-xl ${style.animatedButton}`} to="project">
             Começar meu projeto 😎
           </Link>
           <section className="flex flex-wrap justify-center max-w-[450px]">
