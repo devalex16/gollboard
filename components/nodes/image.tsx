@@ -24,7 +24,7 @@ export default function Image({ id, data }: NodeProps) {
         : <img className="w-full h-[90%]" src={url} alt="Imagem" />
       }
       <NodeResizeControl style={{ background: 'transparent', border: 'none' }} minWidth={60} minHeight={60}>
-         <Crop className="absolute bottom-1 right-1" size={25} />
+        <Crop className="absolute bottom-1 right-1" size={25} />
       </NodeResizeControl>
       <Toolbar data={data} visible={visible} context={context} id={id} />
       <Handle id="right" type="source" position={Position.Right} className="-right-5 border-1 border-cyan-400 bg-transparent h-3 w-3" />
