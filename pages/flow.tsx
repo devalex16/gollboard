@@ -32,7 +32,7 @@ const initialNodes = [
     type: 'square',
     position: {
       x: 100,
-      y: 100
+      y: 300
     },
     data: {
       color: "bg-cyan-200",
